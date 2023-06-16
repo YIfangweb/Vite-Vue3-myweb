@@ -1,12 +1,15 @@
 <script setup>
 import { reactive } from "vue";
-import copy from "./copyrightInfo.vue"
 import welcome from "./welcome.vue";
 import surport from "./surport.vue";
-
+import aboutme from "./aboutme.vue";
+import port from "./port.vue";
+import copyrightInfo from './copyrightInfo.vue'
 const ComponentMap = {
     1:welcome,
-    2:surport,
+    2:aboutme,
+    3:surport,
+    4:port
 }
 const ComponentProps = reactive({
     type: 1
@@ -15,30 +18,40 @@ const ComponentProps = reactive({
 function setComsTohome() {
   ComponentProps.type = 1
 }
-function setComsToSUPR() {
+function setComsToABOU() {
   ComponentProps.type = 2
+}
+function setComsToSUPR() {
+  ComponentProps.type = 3
+}
+function setComsToPORT() {
+  ComponentProps.type = 4
 }
 </script>
 
 <template>
   <div class="mymenu">
     <ul class='mymenu-ul'>
-      <li id="lihome"><router-link to="" @click="setComsTohome">HOME</router-link></li>
-      <li id="liabou"><router-link to="" >ABOU</router-link></li>
-      <li id="lisupr"><router-link to="" @click="setComsToSUPR">SUPR</router-link></li>
-      <li id="liport"><router-link to="" >PORT</router-link></li>
+      <li id="lihome" class="myli"><router-link to="" @click="setComsTohome">HOME</router-link></li>
+      <li id="liabou" class="myli"><router-link to="" @click="setComsToABOU">ABOU</router-link></li>
+      <li id="lisupr" class="myli"><router-link to="" @click="setComsToSUPR">SUPR</router-link></li>
+      <li id="liport" class="myli"><router-link to="" @click="setComsToPORT">PORT</router-link></li>
     </ul>
   </div>
   <keep-alive>
       <component :is="ComponentMap[ComponentProps.type]"></component>
   </keep-alive>
-  <copy></copy>
+  <copyrightInfo class="copyrightInfo"></copyrightInfo>
 </template>
 <style>
 
 @font-face {
   font-family: "Potta";
   src: url("../assets/fonts/GrahamPotta.otf");
+}
+@font-face {
+  font-family: "alimama";
+  src: url("../assets/fonts/AlimamaShuHeiTi-Bold.otf");
 }
 
 li {
@@ -51,18 +64,23 @@ a {
   position: relative;
 }
 
+.copyrightInfo{
+  position: absolute;
+  bottom: 0px;
+}
+
 @media (max-width:1920px) {
 
   /* 兼容PC */
   .mymenu {
+    font-family: "Potta","alimama";
     width: 15%;
     position: absolute;
     top: 40%;
     left: -1%;
   }
 
-  li {
-    font-family: "Potta";
+  .myli {
     font-size: 10px;
     margin-top: 15%;
     margin-bottom: 15%;
@@ -94,17 +112,17 @@ a:hover::after {
 
   /* 兼容phone*/
   .mymenu {
-    width: 100%;
+    width: 80%;
     position: absolute;
-    top: 1%;
+    top: 2%;
+    left: 2%;
   }
 
   .mymenu-ul {
     width: 100%;
   }
 
-  li {
-    font-family: "Potta";
+  .myli {
     font-size: 0.5em;
     float: left;
     margin-top: 0;

@@ -1,5 +1,5 @@
 <script setup>
-import home from './components/home.vue';
+import Mymenu from './components/Mymenu.vue';
 			console.log(
 		      "                   _oo0oo_                     \n"+
           "                  o8888888o										\n"+
@@ -35,7 +35,7 @@ import home from './components/home.vue';
 </script>
 
 <template>
-  <home></home>
+  <mymenu></mymenu>
 </template>
 
 <style>

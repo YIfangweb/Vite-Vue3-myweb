@@ -14,15 +14,6 @@
 </template>
 
 <style>
-@font-face {
-  font-family: "Potta";
-  src: url("../assets/fonts/GrahamPotta.otf");
-}
-
-@font-face {
-  font-family: "alimama";
-  src: url("../assets/fonts/GrahamPotta.otf");
-}
 
 .welcomeTitle_en {
   font-size: 10px;
@@ -33,7 +24,7 @@
 }
 
 .welcomeTitle_zh {
-  font-size: 1.8em;
+  font-size: 25px;
   font-family: "alimama";
   position: absolute;
   top: 50%;
