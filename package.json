@@ -1,6 +1,6 @@
 {
-  "name": "myWebsite",
-  "version": "0.0.0",
+  "name": "mywebsite",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "vite",
