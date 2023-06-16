@@ -25,7 +25,7 @@
 }
 
 .welcomeTitle_en {
-  font-size: 1em;
+  font-size: 10px;
   font-family: "Potta";
   position: absolute;
   top: 20%;
