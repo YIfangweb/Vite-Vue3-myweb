@@ -105,7 +105,7 @@ a:hover::after {
 
   li {
     font-family: "Potta";
-    font-size: 0.01rem;
+    font-size: 1em;
     float: left;
     margin-top: 0;
     margin-bottom: 0;
