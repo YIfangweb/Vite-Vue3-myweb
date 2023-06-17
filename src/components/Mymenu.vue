@@ -42,9 +42,19 @@ function setComsToPORT() {
       <component :is="ComponentMap[ComponentProps.type]"></component>
   </keep-alive>
   <copyrightInfo class="copyrightInfo"></copyrightInfo>
+  <div class="noise"></div>
 </template>
 <style>
-
+.noise {
+    z-index: -1;
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(229.83deg, #fac8dd 0%, #d2f7f7 100%);
+    filter: contrast(100%) brightness(100%);
+  }
 @font-face {
   font-family: "Potta";
   src: url("../assets/fonts/GrahamPotta.otf");
@@ -65,8 +75,9 @@ a {
 }
 
 .copyrightInfo{
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  bottom: 10px;
+  transform: translate(-50%, 0);
 }
 
 @media (max-width:1920px) {
