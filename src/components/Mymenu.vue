@@ -48,7 +48,7 @@ function setComsToPORT() {
 .noise {
     z-index: -1;
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     position: absolute;
     top: 0;
     left: 0;
