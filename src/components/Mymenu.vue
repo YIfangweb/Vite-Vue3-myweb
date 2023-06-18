@@ -5,14 +5,16 @@ import surport from "./surport.vue";
 import aboutme from "./aboutme.vue";
 import port from "./port.vue";
 import copyrightInfo from './copyrightInfo.vue'
+import mytitle from "./mytitle.vue";
+
 const ComponentMap = {
-    1:welcome,
-    2:aboutme,
-    3:surport,
-    4:port
+  1: welcome,
+  2: aboutme,
+  3: surport,
+  4: port
 }
 const ComponentProps = reactive({
-    type: 1
+  type: 1
 })
 
 function setComsTohome() {
@@ -30,6 +32,7 @@ function setComsToPORT() {
 </script>
 
 <template>
+  <mytitle></mytitle>
   <div class="mymenu">
     <ul class='mymenu-ul'>
       <li id="lihome" class="myli"><router-link to="" @click="setComsTohome">HOME</router-link></li>
@@ -39,26 +42,28 @@ function setComsToPORT() {
     </ul>
   </div>
   <keep-alive>
-      <component :is="ComponentMap[ComponentProps.type]"></component>
+    <component :is="ComponentMap[ComponentProps.type]"></component>
   </keep-alive>
   <copyrightInfo class="copyrightInfo"></copyrightInfo>
   <div class="noise"></div>
 </template>
 <style>
 .noise {
-    z-index: -1;
-    width: 100%;
-    height: 1500px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(229.83deg, #fac8dd 0%, #d2f7f7 100%);
-    filter: contrast(100%) brightness(100%);
-  }
+  z-index: -1;
+  width: 100%;
+  height: 2500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(229.83deg, #fac8dd 0%, #d2f7f7 100%);
+  filter: contrast(100%) brightness(100%);
+}
+
 @font-face {
   font-family: "Potta";
   src: url("../assets/fonts/GrahamPotta.otf");
 }
+
 @font-face {
   font-family: "alimama";
   src: url("../assets/fonts/AlimamaShuHeiTi-Bold.otf");
@@ -74,7 +79,7 @@ a {
   position: relative;
 }
 
-.copyrightInfo{
+.copyrightInfo {
   position: fixed;
   bottom: 10px;
   transform: translate(-50%, 0);
@@ -84,11 +89,11 @@ a {
 
   /* 兼容PC */
   .mymenu {
-    font-family: "Potta","alimama";
+    font-family: "Potta", "alimama";
     width: 15%;
     position: absolute;
     top: 40%;
-    left: -1%;
+    left: 1%;
   }
 
   .myli {
@@ -125,8 +130,8 @@ a:hover::after {
   .mymenu {
     width: 80%;
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 6%;
+    margin-left: 10%;
   }
 
   .mymenu-ul {

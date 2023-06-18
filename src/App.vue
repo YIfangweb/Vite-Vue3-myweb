@@ -35,7 +35,7 @@ import Mymenu from './components/Mymenu.vue';
 </script>
 
 <template>
-  <mymenu></mymenu>
+  <Mymenu></Mymenu>
 </template>
 
 <style>
