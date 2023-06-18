@@ -130,7 +130,7 @@ a:hover::after {
   .mymenu {
     width: 80%;
     position: absolute;
-    top: 6%;
+    top: 8%;
     margin-left: 10%;
   }
 

@@ -61,7 +61,7 @@ const titleList = [
     border-bottom: #000000 1px solid;
 }
 .wrap .mydescs {
-    font-size: 1vw;
+    font-size: 10px;
     font-family: "Potta", "alimama";
     color: #000000;
     display: inline-block;
