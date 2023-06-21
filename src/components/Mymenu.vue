@@ -55,7 +55,7 @@ function setComsToPORT() {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(229.83deg, #fac8dd 0%, #d2f7f7 100%);
+  background: linear-gradient(229.83deg, #d5fffd 0%, #ffbee9 100%);
   filter: contrast(100%) brightness(100%);
 }
 
